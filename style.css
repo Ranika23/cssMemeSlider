@@ -1,0 +1,264 @@
+@font-face {
+    font-family: Inter;
+    src: url(assets/fonts/Inter-Regular.ttf);
+}
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+.body {
+    width: 100%;
+    margin: 0%;
+    background: rgb(31, 30, 30);
+}
+.body-container {
+    font-family: Inter;
+    font-weight: 600;
+    overflow: clip;
+    max-width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    margin: 0%;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: rgb(31, 30, 30);
+    gap: 2vh;
+}
+.body-container input {
+    display: none;
+}
+.meme-slider {
+    width: 95vw;
+    height: 73vh;
+    margin: auto;
+    border-radius: 2vh 2vw;
+    overflow: hidden;
+}
+.slider-wrapper {
+    width: 95vw;
+    height: 296vh;
+    display: flex;
+    flex-direction: column;
+}
+.slide-1{
+    width: 100%;
+    height: 33.3%;
+    display: flex;
+    justify-content: center;
+    background-image: url("assets/img/meme1.jpg");
+    background-size: 100% 100%;
+    transition: 2s;
+}
+.slide-2{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 33.3%;
+    background-image: url("assets/img/meme2.jpg");
+    background-size: 100% 120%;
+    transition: 2s;
+}
+.slide-3 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 33.3%;
+    background-image: url("assets/img/meme3.jpg");
+    background-size: 100% 100%;
+    transition: 2s;
+}
+.slide-4 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 33.3%;
+    background-image: url("assets/img/meme4.jpg");
+    background-size: 100% 100%;
+    transition: 2s;
+}
+.point-slide1:checked~.meme-slider>.slider-wrapper {
+    margin-top: 0vh;
+    transition: 1s;
+}
+.point-slide2:checked~.meme-slider>.slider-wrapper {
+    margin-top: -74vh;
+    transition: 1s;
+}
+.point-slide3:checked~.meme-slider>.slider-wrapper {
+    margin-top: -148vh;
+    transition: 1s;
+}
+.point-slide4:checked~.meme-slider>.slider-wrapper {
+    margin-top: -222vh;
+    transition: 1s;
+}
+.controls-text {
+    width: 95vw;
+    height: 20vh;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+.text-slider {
+    width: 70vw;
+    height: 15vh;
+    display: flex;
+    overflow: hidden;
+}
+.text-wrapper {
+    margin-top: 0%;
+    width: 70vw;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+.point-slide1:checked~.controls-text .text-wrapper {
+    margin-top: 0vh;
+    transition: 1s;
+}
+.point-slide2:checked~.controls-text .text-wrapper {
+    margin-top: -15vh;
+    transition: 1s;
+}
+.point-slide3:checked~.controls-text .text-wrapper {
+    margin-top: -30vh;
+    transition: 1s;
+}
+.point-slide4:checked~.controls-text .text-wrapper {
+    margin-top: -45vh;
+    transition: 1s;
+}
+.text-wrapper div {
+    color: rgb(224, 224, 223);
+    font-size: 100%;
+    height: 33.3%;
+    width: auto;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+}
+.controls-slider {
+    width: 20vw;
+    height: 6vh;
+    display: flex;
+    justify-content: end;
+    gap: 5%;
+    align-items: center;
+    padding: auto;
+}
+.controls-slider label {
+    display: inline-block;
+    width: 3vw;
+    height: 3vw;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.controls-slider label div {
+    display: inline-block;
+    width: 1.5vw;
+    height: 1.5vw;
+    background: rgb(87, 137, 150);
+    border: rgb(87, 137, 150) 0.2vw solid;
+    border-radius: 50%;
+}
+.point-slide1:checked~.controls-text .controls-slider .label1 div,
+.point-slide2:checked~.controls-text .controls-slider .label2 div,
+.point-slide3:checked~.controls-text .controls-slider .label3 div,
+.point-slide4:checked~.controls-text .controls-slider .label4 div {
+    border: rgb(87, 137, 150) 0.2vw solid;
+    background: none;
+}
+.point-slide1:checked:hover~.controls-text .controls-slider .label1 div,
+.point-slide2:checked:hover~.controls-text .controls-slider .label2 div,
+.point-slide3:checked:hover~.controls-text .controls-slider .label3 div,
+.point-slide4:checked:hover~.controls-text .controls-slider .label4 div {
+    border: rgb(211, 237, 243) 0.2vw solid;
+    background: none;
+}
+.controls-slider label div:hover {
+    background: rgb(211, 237, 243);
+    border: rgb(211, 237, 243) 0.2vw solid;
+}
+@media (max-height: 320px) {
+    
+    .meme-slider {
+        height: 54vh;
+    }
+    .slider-wrapper {
+        height: 216vh;
+    }
+    .point-slide2:checked~.meme-slider>.slider-wrapper {
+        margin-top: -54vh;
+        transition: 1s;
+    }
+    .point-slide3:checked~.meme-slider>.slider-wrapper {
+        margin-top: -108vh;
+        transition: 1s;
+    }
+    .point-slide4:checked~.meme-slider>.slider-wrapper {
+        margin-top: -162vh;
+        transition: 1s;
+    }
+    .text-wrapper {
+        width: 90vw;
+    }
+    .text-slider {
+        width: 90vw;
+    }
+    .controls-text {
+        flex-direction: column-reverse;
+        height: 40vh;
+        justify-content: start;
+        padding-top: 3vh;
+        gap: 3vh;
+    }
+    .controls-slider {
+        align-self: center;
+        justify-content: center;
+    }
+}
+@media (max-width: 320px) {
+    
+    .meme-slider {
+        height: 54vh;
+    }
+    .slider-wrapper {
+        height: 216vh;
+    }
+    .point-slide2:checked~.meme-slider>.slider-wrapper {
+        margin-top: -54vh;
+        transition: 1s;
+    }
+    .point-slide3:checked~.meme-slider>.slider-wrapper {
+        margin-top: -108vh;
+        transition: 1s;
+    }
+    .point-slide4:checked~.meme-slider>.slider-wrapper {
+        margin-top: -162vh;
+        transition: 1s;
+    }
+    .text-wrapper {
+        width: 90vw;
+    }
+    .text-slider {
+        width: 90vw;
+    }
+    .controls-text {
+        flex-direction: column-reverse;
+        height: 40vh;
+        justify-content: start;
+        padding-top: 3vh;
+        gap: 3vh;
+    }
+    .controls-slider {
+        align-self: center;
+        justify-content: center;
+    }
+}
