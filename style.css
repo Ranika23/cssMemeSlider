@@ -224,3 +224,41 @@
         justify-content: center;
     }
 }
+@media (max-width: 320px) {
+    
+    .meme-slider {
+        height: 54vh;
+    }
+    .slider-wrapper {
+        height: 216vh;
+    }
+    .point-slide2:checked~.meme-slider>.slider-wrapper {
+        margin-top: -54vh;
+        transition: 1s;
+    }
+    .point-slide3:checked~.meme-slider>.slider-wrapper {
+        margin-top: -108vh;
+        transition: 1s;
+    }
+    .point-slide4:checked~.meme-slider>.slider-wrapper {
+        margin-top: -162vh;
+        transition: 1s;
+    }
+    .text-wrapper {
+        width: 90vw;
+    }
+    .text-slider {
+        width: 90vw;
+    }
+    .controls-text {
+        flex-direction: column-reverse;
+        height: 40vh;
+        justify-content: start;
+        padding-top: 3vh;
+        gap: 3vh;
+    }
+    .controls-slider {
+        align-self: center;
+        justify-content: center;
+    }
+}
